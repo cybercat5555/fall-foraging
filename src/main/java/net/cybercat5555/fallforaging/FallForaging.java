@@ -1,5 +1,7 @@
 package net.cybercat5555.fallforaging;
 
+import net.cybercat5555.fallforaging.block.ModBlocks;
+import net.cybercat5555.fallforaging.item.ModItemGroups;
 import net.cybercat5555.fallforaging.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -13,7 +15,10 @@ public class FallForaging implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItemGroups.registerItemGroups();
+
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 
 	}
 }

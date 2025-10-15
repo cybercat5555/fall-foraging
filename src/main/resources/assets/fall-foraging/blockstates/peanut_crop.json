@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "fall-foraging:block/peanuts_crop_stage0"
+    },
+    "age=1": {
+      "model": "fall-foraging:block/peanuts_crop_stage0"
+    },
+    "age=2": {
+      "model": "fall-foraging:block/peanuts_crop_stage1"
+    },
+    "age=3": {
+      "model": "fall-foraging:block/peanuts_crop_stage1"
+    },
+    "age=4": {
+      "model": "fall-foraging:block/peanuts_crop_stage2"
+    },
+    "age=5": {
+      "model": "fall-foraging:block/peanuts_crop_stage2"
+    },
+    "age=6": {
+      "model": "fall-foraging:block/peanuts_crop_stage3"
+    },
+    "age=7": {
+      "model": "fall-foraging:block/peanuts_crop_stage4"
+    }
+  }
+}

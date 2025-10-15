@@ -1,7 +1,9 @@
 package net.cybercat5555.fallforaging.item;
 
 import net.cybercat5555.fallforaging.FallForaging;
+import net.cybercat5555.fallforaging.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.item.AliasedBlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
@@ -12,7 +14,8 @@ public class ModItems {
     public static final Item ACORN = registerItem( "acorn", new Item(new Item.Settings()));
     public static final Item DARK_ACORN = registerItem( "dark_acorn", new Item(new Item.Settings()));
     public static final Item CRANBERRY = registerItem( "cranberry", new Item(new Item.Settings()));
-    public static final Item PEANUT = registerItem( "peanut", new Item(new Item.Settings()));
+    public static final Item PEANUT = registerItem( "peanut",
+            new AliasedBlockItem(ModBlocks.PEANUT_CROP, new Item.Settings()));
     public static final Item PUMPKIN_SLICE = registerItem( "pumpkin_slice", new Item(new Item.Settings()));
     public static final Item PEPITAS = registerItem( "pepitas", new Item(new Item.Settings()));
     public static final Item SUNFLOWER_SEEDS = registerItem( "sunflower_seeds", new Item(new Item.Settings()));
@@ -24,16 +27,5 @@ public class ModItems {
 
     public static void registerModItems () {
         FallForaging.LOGGER.info("Registering Mod Items for" + FallForaging.MOD_ID);
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
-            entries.add(ACORN);
-            entries.add(DARK_ACORN);
-            entries.add(CRANBERRY);
-            entries.add(PEANUT);
-            entries.add(PUMPKIN_SLICE);
-            entries.add(PEPITAS);
-            entries.add(SUNFLOWER_SEEDS);
-            entries.add(BOTTLED_SQUIRREL);
-        });
     }
 }

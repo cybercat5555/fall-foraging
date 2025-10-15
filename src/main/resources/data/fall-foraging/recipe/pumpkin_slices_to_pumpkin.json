@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "fall-foraging:pumpkin_slice"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:pumpkin"
+  }
+}
