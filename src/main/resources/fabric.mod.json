@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "fall-foraging",
+	"version": "${version}",
+	"name": "Fall Foraging",
+	"description": "Enhances your world with autumnal foraging such as acorns, cranberries, and squirrels!",
+	"authors": [
+		"cybercat5555"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC-BY-NC-ND-4.0",
+	"icon": "assets/fall-foraging/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.cybercat5555.fallforaging.FallForaging"
+		],
+		"fabric-datagen": [
+			"net.cybercat5555.fallforaging.FallForagingDataGenerator"
+		],
+		"client": [
+			"net.cybercat5555.fallforaging.FallForagingClient"
+		]
+	},
+	"mixins": [
+		"fall-foraging.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
