@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "crop": "fall-foraging:block/peanuts_stage1"
+    "all": "fall-foraging:block/peanuts_stage1"
   }
 }
