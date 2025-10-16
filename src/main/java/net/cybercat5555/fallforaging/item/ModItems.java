@@ -13,12 +13,13 @@ import net.minecraft.util.Identifier;
 public class ModItems {
     public static final Item ACORN = registerItem( "acorn", new Item(new Item.Settings()));
     public static final Item DARK_ACORN = registerItem( "dark_acorn", new Item(new Item.Settings()));
-    public static final Item CRANBERRY = registerItem( "cranberry", new Item(new Item.Settings()));
+    public static final Item CRANBERRY = registerItem( "cranberry",
+            new AliasedBlockItem(ModBlocks.CRANBERRY_BUSH, new Item.Settings().food(ModFoodComponents.CRANBERRY)));
     public static final Item PEANUT = registerItem( "peanut",
-            new AliasedBlockItem(ModBlocks.PEANUT_CROP, new Item.Settings()));
-    public static final Item PUMPKIN_SLICE = registerItem( "pumpkin_slice", new Item(new Item.Settings()));
-    public static final Item PEPITAS = registerItem( "pepitas", new Item(new Item.Settings()));
-    public static final Item SUNFLOWER_SEEDS = registerItem( "sunflower_seeds", new Item(new Item.Settings()));
+            new AliasedBlockItem(ModBlocks.PEANUT_CROP, new Item.Settings().food(ModFoodComponents.PEANUT)));
+    public static final Item PUMPKIN_SLICE = registerItem( "pumpkin_slice", new Item(new Item.Settings().food(ModFoodComponents.PUMPKIN_SLICE)));
+    public static final Item PEPITAS = registerItem( "pepitas", new Item(new Item.Settings().food(ModFoodComponents.PEPITAS)));
+    public static final Item SUNFLOWER_SEEDS = registerItem( "sunflower_seeds", new Item(new Item.Settings().food(ModFoodComponents.SUNFLOWER_SEEDS)));
     public static final Item BOTTLED_SQUIRREL = registerItem( "bottled_squirrel", new Item(new Item.Settings()));
 
     private static Item registerItem(String name, Item item) {

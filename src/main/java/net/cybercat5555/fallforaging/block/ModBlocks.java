@@ -1,6 +1,7 @@
 package net.cybercat5555.fallforaging.block;
 
 import net.cybercat5555.fallforaging.FallForaging;
+import net.cybercat5555.fallforaging.block.custom.CranberryBushBlock;
 import net.cybercat5555.fallforaging.block.custom.PeanutCropBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -18,6 +19,10 @@ public class ModBlocks {
     public static final Block PEANUT_CROP = registerBlockWithoutBlockItem( "peanut_crop",
         new PeanutCropBlock(AbstractBlock.Settings.create().noCollision()
                 .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.DARK_GREEN)));
+
+    public static final Block CRANBERRY_BUSH = registerBlockWithoutBlockItem("cranberry_bush",
+        new CranberryBushBlock(AbstractBlock.Settings.create().noCollision()
+                .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.DARK_GREEN)));
 
     private static Block registerBlock(String name, Block block){
         registerBlockItems(name, block);
