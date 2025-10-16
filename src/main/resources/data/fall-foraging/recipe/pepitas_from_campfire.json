@@ -1,9 +1,9 @@
 {
   "type": "minecraft:campfire_cooking",
-  "category": "food",
+  "category": "misc",
   "cookingtime": 200,
   "experience": 0.35,
-  "ingredient": "minecraft:pumpkin_seed",
+  "ingredient": "minecraft:pumpkin_seeds",
   "result": {
     "id": "fall-foraging:pepitas"
   }

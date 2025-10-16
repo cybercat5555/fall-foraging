@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
-  "category": "food",
+  "category": "misc",
   "cookingtime": 100,
   "experience": 0.35,
-  "ingredient": "minecraft:pumpkin_seed",
+  "ingredient": "minecraft:pumpkin_seeds",
   "result": {
     "id": "fall-foraging:pepitas"
   }
