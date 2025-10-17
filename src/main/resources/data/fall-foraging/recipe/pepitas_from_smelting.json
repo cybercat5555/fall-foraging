@@ -3,7 +3,9 @@
   "category": "misc",
   "cookingtime": 100,
   "experience": 0.35,
-  "ingredient": "minecraft:pumpkin_seeds",
+  "ingredient": {
+    "item": "minecraft:pumpkin_seeds"
+  },
   "result": {
     "id": "fall-foraging:pepitas"
   }
