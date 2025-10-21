@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "fall-foraging:raw_squirrel"
+  },
+  "result": {
+    "id": "fall-foraging:cooked_squirrel"
+  }
+}
