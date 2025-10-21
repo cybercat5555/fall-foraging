@@ -2,11 +2,14 @@ package net.cybercat5555.fallforaging;
 
 import net.cybercat5555.fallforaging.block.ModBlocks;
 import net.cybercat5555.fallforaging.common.init.BiomeModificationsInitializer;
+import net.cybercat5555.fallforaging.entity.ModEntities;
+import net.cybercat5555.fallforaging.entity.custom.SquirrelEntity;
 import net.cybercat5555.fallforaging.item.ModItemGroups;
 import net.cybercat5555.fallforaging.item.ModItems;
 import net.cybercat5555.fallforaging.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
@@ -31,6 +34,8 @@ public class FallForaging implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModWorldGeneration.generateModWorldGen();
 		BiomeModificationsInitializer.init();
+		ModEntities.registerModEntities();
+
 
 
 		CompostingChanceRegistry.INSTANCE.add(ModItems.CRANBERRY, 0.25f);
@@ -38,8 +43,11 @@ public class FallForaging implements ModInitializer {
 		CompostingChanceRegistry.INSTANCE.add(ModItems.PUMPKIN_SLICE, 0.25f);
 		CompostingChanceRegistry.INSTANCE.add(ModItems.ACORN, 0.15f);
 		CompostingChanceRegistry.INSTANCE.add(ModItems.DARK_ACORN, 0.15f);
+		CompostingChanceRegistry.INSTANCE.add(ModItems.ROASTED_ACORN, 0.15f);
 		CompostingChanceRegistry.INSTANCE.add(ModItems.PEPITAS, 0.15f);
 		CompostingChanceRegistry.INSTANCE.add(ModItems.SUNFLOWER_SEEDS, 0.15f);
+
+		FabricDefaultAttributeRegistry.register(ModEntities.SQUIRREL, SquirrelEntity.createAttributes());
 
 
 

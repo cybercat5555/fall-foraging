@@ -17,12 +17,16 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.ACORN);
                         entries.add(ModItems.DARK_ACORN);
+                        entries.add(ModItems.ROASTED_ACORN);
                         entries.add(ModItems.CRANBERRY);
                         entries.add(ModItems.PEANUT);
                         entries.add(ModItems.PUMPKIN_SLICE);
                         entries.add(ModItems.PEPITAS);
                         entries.add(ModItems.SUNFLOWER_SEEDS);
+                        entries.add(ModItems.RAW_SQUIRREL);
+                        entries.add(ModItems.COOKED_SQUIRREL);
                         entries.add(ModItems.BOTTLED_SQUIRREL);
+                        entries.add(ModItems.SQUIRREL_SPAWN_EGG);
                     })
 
 

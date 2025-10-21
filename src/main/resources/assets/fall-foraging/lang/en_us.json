@@ -8,5 +8,11 @@
   "item.fall-foraging.pumpkin_slice": "Pumpkin Slice",
   "item.fall-foraging.pepitas": "Pepitas",
   "item.fall-foraging.sunflower_seeds": "Sunflower Seeds",
-  "item.fall-foraging.bottled_squirrel": "Bottled Squirrel"
+  "item.fall-foraging.bottled_squirrel": "Bottled Squirrel",
+  "item.fall-foraging.roasted_acorn": "Roasted Acorn",
+  "item.fall-foraging.raw_squirrel": "Raw Squirrel",
+  "item.fall-foraging.cooked_squirrel": "Cooked Squirrel",
+  "item.fall-foraging.squirrel_spawn_egg": "Squirrel Spawn Egg",
+
+  "entity.fall-foraging.squirrel": "Squirrel"
 }
