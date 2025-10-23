@@ -25,8 +25,12 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class SquirrelEntity extends AnimalEntity {
+    public static final TrackedData<Boolean> TRUSTING = DataTracker.registerData(SquirrelEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
+
+    @Nullable
+    private FleeGoal<PlayerEntity> fleeGoal;
 
     public SquirrelEntity(EntityType<? extends AnimalEntity> entityType, World world) {
         super(entityType, world);
@@ -34,12 +38,24 @@ public class SquirrelEntity extends AnimalEntity {
     }
 
     boolean isTrusting() {
-        return (Boolean)this.dataTracker.get(TRUSTING);
+        return this.dataTracker.get(TRUSTING);
     }
 
     private void setTrusting(boolean trusting) {
         this.dataTracker.set(TRUSTING, trusting);
         this.updateFleeing();
+    }
+
+    protected void updateFleeing() {
+        if (this.fleeGoal == null) {
+            this.fleeGoal = new FleeGoal<>(this, PlayerEntity.class, 16.0F, 0.8, 1.33);
+        }
+
+        this.goalSelector.remove(this.fleeGoal);
+        if (!this.isTrusting()) {
+            this.goalSelector.add(4, this.fleeGoal);
+        }
+
     }
 
     public void writeCustomDataToNbt(NbtCompound nbt) {
@@ -113,5 +129,22 @@ public class SquirrelEntity extends AnimalEntity {
     @Override
     public PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
         return ModEntities.SQUIRREL.create(world);
+    }
+
+    static class FleeGoal<T extends LivingEntity> extends FleeEntityGoal<T> {
+        private final SquirrelEntity squirrel;
+
+        public FleeGoal(SquirrelEntity squirrel, Class<T> fleeFromType, float distance, double slowSpeed, double fastSpeed) {
+            super(squirrel, fleeFromType, distance, slowSpeed, fastSpeed, EntityPredicates.EXCEPT_CREATIVE_OR_SPECTATOR::test);
+            this.squirrel = squirrel;
+        }
+
+        public boolean canStart() {
+            return !this.squirrel.isTrusting() && super.canStart();
+        }
+
+        public boolean shouldContinue() {
+            return !this.squirrel.isTrusting() && super.shouldContinue();
+        }
     }
 }
