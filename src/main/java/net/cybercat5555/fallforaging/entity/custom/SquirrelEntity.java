@@ -1,26 +1,25 @@
 package net.cybercat5555.fallforaging.entity.custom;
 
 import net.cybercat5555.fallforaging.entity.ModEntities;
-import net.cybercat5555.fallforaging.item.ModItems;
 import net.cybercat5555.fallforaging.util.ModTags;
 import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
-import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.data.DataTracker;
-import net.minecraft.entity.mob.AmbientEntity;
+import net.minecraft.entity.data.TrackedData;
+import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.ai.goal.FleeEntityGoal;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.AnimalEntity;
+import net.minecraft.entity.passive.OcelotEntity;
 import net.minecraft.entity.passive.PassiveEntity;
-import net.minecraft.entity.passive.RabbitEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
-import net.minecraft.recipe.Ingredient;
-import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.predicate.entity.EntityPredicates;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
@@ -77,7 +76,7 @@ public class SquirrelEntity extends AnimalEntity {
    }
 
    public static DefaultAttributeContainer.Builder createAttributes(){
-        return MobEntity.createMobAttributes().add()
+        return MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 18 )
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED,  1.2)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE,  10);
