@@ -65,7 +65,7 @@ public class SquirrelEntity extends AnimalEntity {
        this.goalSelector.add(1, new AnimalMateGoal(this, 1.15D));
        this.goalSelector.add(1, new EscapeDangerGoal(this, 2.5));
        this.goalSelector.add(2, new TemptGoal(this, 1.25D, (stack) -> {
-           return stack.isIn(ModTags.ACORNS);
+           return stack.isIn(ModTags.Items.ACORNS);
        }, false));
       // this.goalSelector.add(2); new FleeEntityGoal<>(entity:this, speed:2D,)
 
@@ -102,12 +102,12 @@ public class SquirrelEntity extends AnimalEntity {
     }
 
     private boolean isValidItem(ItemStack stack) {
-        return stack.isIn(ModTags.ACORNS);
+        return stack.isIn(ModTags.Items.ACORNS);
     }
 
     @Override
     public boolean isBreedingItem(ItemStack stack) {
-        return stack.isIn(ModTags.ACORNS);
+        return stack.isIn(ModTags.Items.ACORNS);
     }
 
     @Nullable
