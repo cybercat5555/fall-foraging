@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "fall-foraging:block/hanging_acorns_stage0"
+    },
+    "age=1": {
+      "model": "fall-foraging:block/hanging_acorns_stage1"
+    },
+    "age=2": {
+      "model": "fall-foraging:block/hanging_acorns_stage3"
+    },
+    "age=3": {
+      "model": "fall-foraging:block/hanging_acorns_stage4"
+    }
+  }
+}

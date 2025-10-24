@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "fall-foraging:block/hanging_acorns_stage3",
+    "overlay": "fall-foraging:block/hanging_acorns_stage3_tintable"
+  }
+}
