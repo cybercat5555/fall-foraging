@@ -13,8 +13,10 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    public static final Item ACORN = registerItem( "acorn", new Item(new Item.Settings()));
-    public static final Item DARK_ACORN = registerItem( "dark_acorn", new Item(new Item.Settings()));
+    public static final Item ACORN = registerItem( "acorn",
+            new AliasedBlockItem(ModBlocks.FALLEN_ACORNS, new Item.Settings()));
+    public static final Item DARK_ACORN = registerItem( "dark_acorn",
+            new Item(new Item.Settings()));
     public static final Item CRANBERRY = registerItem( "cranberry",
             new AliasedBlockItem(ModBlocks.CRANBERRY_BUSH, new Item.Settings().food(ModFoodComponents.CRANBERRY)));
     public static final Item PEANUT = registerItem( "peanut",

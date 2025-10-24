@@ -24,6 +24,14 @@ public class ModBlocks {
         new CranberryBushBlock(AbstractBlock.Settings.create().noCollision()
                 .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.DARK_GREEN)));
 
+    public static final Block HANGING_ACORNS = registerBlockWithoutBlockItem("hanging_acorns",
+            new CranberryBushBlock(AbstractBlock.Settings.create().noCollision()
+                    .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.DARK_GREEN)));
+
+    public static final Block FALLEN_ACORNS = registerBlockWithoutBlockItem("fallen_acorns",
+            new CranberryBushBlock(AbstractBlock.Settings.create().noCollision()
+                    .breakInstantly().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.BROWN)));
+
     private static Block registerBlock(String name, Block block){
         registerBlockItems(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(FallForaging.MOD_ID, name),block);
