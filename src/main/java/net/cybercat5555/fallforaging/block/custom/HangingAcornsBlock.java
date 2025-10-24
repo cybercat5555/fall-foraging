@@ -63,11 +63,6 @@ public class HangingAcornsBlock extends FallingBlock implements Fertilizable {
 
     protected void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (!isHanging(state)) {
-            if (random.nextInt(7) == 0) {
-                this.generate(world, pos, state, random);
-            }
-
-        } else {
             if (!isFullyGrown(state)) {
                 world.setBlockState(pos, (BlockState)state.cycle(AGE), 2);
             }
