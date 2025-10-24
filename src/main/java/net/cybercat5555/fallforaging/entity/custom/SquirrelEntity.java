@@ -93,8 +93,8 @@ public class SquirrelEntity extends AnimalEntity {
 
    public static DefaultAttributeContainer.Builder createAttributes(){
         return MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 18 )
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED,  0.7)
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 4)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED,  0.3)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE,  10);
    }
 
