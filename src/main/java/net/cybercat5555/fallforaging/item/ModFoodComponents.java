@@ -3,8 +3,13 @@ package net.cybercat5555.fallforaging.item;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.Items;
 
 public class ModFoodComponents {
+
+    private static FoodComponent.Builder createStew(int hunger) {
+        return (new FoodComponent.Builder()).nutrition(hunger).saturationModifier(0.6F).usingConvertsTo(Items.BOWL);
+    }
     public static final FoodComponent CRANBERRY = new FoodComponent.Builder().snack().nutrition(2).saturationModifier(0.1f)
             .build();
 
@@ -28,4 +33,11 @@ public class ModFoodComponents {
 
     public static final FoodComponent ROASTED_ACORN = new FoodComponent.Builder().snack().nutrition(3).saturationModifier(0.3f)
             .build();
+
+    public static final FoodComponent FALL_FRUIT_MEDLEY = createStew(7).build();
+
+    public static final FoodComponent LOCRO = createStew(10).build();
+
+
+    public static final FoodComponent NUTTY_SQUIRREL_STEW = createStew(7).build();
 }

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "fall-foraging:pumpkin_slice"
+    },
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "fall-foraging:cranberry"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "fall-foraging:fall_fruit_medley"
+  }
+}

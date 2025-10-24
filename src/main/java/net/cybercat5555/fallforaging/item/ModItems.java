@@ -32,6 +32,12 @@ public class ModItems {
 
     public static final Item ROASTED_ACORN = registerItem( "roasted_acorn", new Item(new Item.Settings().food(ModFoodComponents.ROASTED_ACORN)));
 
+    public static final Item FALL_FRUIT_MEDLEY = registerItem( "fall_fruit_medley", new Item(new Item.Settings().food(ModFoodComponents.FALL_FRUIT_MEDLEY)));
+
+    public static final Item LOCRO = registerItem( "locro", new Item(new Item.Settings().food(ModFoodComponents.LOCRO)));
+
+    public static final Item NUTTY_SQUIRREL_STEW = registerItem( "nutty_squirrel_stew", new Item(new Item.Settings().food(ModFoodComponents.NUTTY_SQUIRREL_STEW)));
+
     public static final Item SQUIRREL_SPAWN_EGG = registerItem("squirrel_spawn_egg",
             new SpawnEggItem(ModEntities.SQUIRREL,  0x8E877D, 0xC49450, new Item.Settings()));
 

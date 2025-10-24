@@ -25,6 +25,9 @@ public class ModItemGroups {
                         entries.add(ModItems.SUNFLOWER_SEEDS);
                         entries.add(ModItems.RAW_SQUIRREL);
                         entries.add(ModItems.COOKED_SQUIRREL);
+                        entries.add(ModItems.FALL_FRUIT_MEDLEY);
+                        entries.add(ModItems.LOCRO);
+                        entries.add(ModItems.NUTTY_SQUIRREL_STEW);
                         entries.add(ModItems.BOTTLED_SQUIRREL);
                         entries.add(ModItems.SQUIRREL_SPAWN_EGG);
                     })

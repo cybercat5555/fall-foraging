@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "fall-foraging:item/nutty_squirrel_stew"
+  }
+}

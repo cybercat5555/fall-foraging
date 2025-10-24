@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "fall-foraging:cooked_squirrel"
+    },
+    {
+      "tag": "fall-foraging:acorns"
+    },
+    {
+      "tag": "fall-foraging:acorns"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "fall-foraging:nutty_squirrel_Stew"
+  }
+}

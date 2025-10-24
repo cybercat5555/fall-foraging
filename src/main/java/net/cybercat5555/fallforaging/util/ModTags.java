@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
 public class ModTags {
     public static class Items{
         public static final TagKey<Item> ACORNS = createTag( "acorns");
+        public static final TagKey<Item> RED_MEAT = createTag( "red_meat");
 
         private static TagKey<Item> createTag(String name){
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(FallForaging.MOD_ID, name));
