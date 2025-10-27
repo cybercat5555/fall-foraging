@@ -3,10 +3,9 @@ package net.cybercat5555.fallforaging.block.custom;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.cybercat5555.fallforaging.block.ModBlocks;
+import net.cybercat5555.fallforaging.item.ModItems;
 import net.minecraft.block.*;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
@@ -14,29 +13,29 @@ import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.state.property.Property;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
-import net.minecraft.world.World;
-import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
-import org.jetbrains.annotations.Nullable;
 
-public class HangingAcornsBlock extends FallingBlock implements Fertilizable {
+public class HangingAcornsBlock extends PlantBlock implements canGrow {
 
-    public static final MapCodec<HangingAcornsBlock> CODEC = RecordCodecBuilder.mapCodec((instance) -> {
-        ) createSettingsCodec()).apply(instance, HangingAcornsBlock::new);
-    });
+    public static final MapCodec<HangingAcornsBlock> CODEC = createCodec(HangingAcornsBlock::new);
     public static final IntProperty AGE;
-    public static final int field_37589 = 3;
+    public static final int MAX_AGE = 3;
     private static final VoxelShape[] SHAPES;
     public static final BooleanProperty HANGING;
 
     public MapCodec<HangingAcornsBlock> getCodec() {
         return CODEC;
     }
+
+    public HangingAcornsBlock(AbstractBlock.Settings settings) {
+        super(settings);
+        this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(AGE, 0));
+    }
+
 
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
@@ -55,6 +54,10 @@ public class HangingAcornsBlock extends FallingBlock implements Fertilizable {
         }
 
         return voxelShape.offset(vec3d.x, vec3d.y, vec3d.z);
+    }
+
+    public ItemStack getPickStack(WorldView world, BlockPos pos, BlockState state) {
+        return new ItemStack(ModItems.ACORN);
     }
 
     protected boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
