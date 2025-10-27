@@ -2,7 +2,9 @@ package net.cybercat5555.fallforaging.block;
 
 import net.cybercat5555.fallforaging.FallForaging;
 import net.cybercat5555.fallforaging.block.custom.CranberryBushBlock;
+import net.cybercat5555.fallforaging.block.custom.FallenAcornsBlock;
 import net.cybercat5555.fallforaging.block.custom.PeanutCropBlock;
+import net.cybercat5555.fallforaging.block.custom.HangingAcornsBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.MapColor;
@@ -25,11 +27,11 @@ public class ModBlocks {
                 .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.DARK_GREEN)));
 
     public static final Block HANGING_ACORNS = registerBlockWithoutBlockItem("hanging_acorns",
-            new CranberryBushBlock(AbstractBlock.Settings.create().noCollision()
+            new HangingAcornsBlock(AbstractBlock.Settings.create().noCollision()
                     .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.DARK_GREEN)));
 
     public static final Block FALLEN_ACORNS = registerBlockWithoutBlockItem("fallen_acorns",
-            new CranberryBushBlock(AbstractBlock.Settings.create().noCollision()
+            new FallenAcornsBlock(AbstractBlock.Settings.create().noCollision()
                     .breakInstantly().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.BROWN)));
 
     private static Block registerBlock(String name, Block block){
