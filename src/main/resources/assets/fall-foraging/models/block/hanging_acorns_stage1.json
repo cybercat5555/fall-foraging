@@ -1,7 +1,7 @@
 {
   "parent": "fall-foraging:block/tintable_cross_crops",
   "textures": {
-    "cross": "fall-foraging:block/hanging_acorns_stage1",
-    "tint": "fall-foraging:block/hanging_acorns_stage1_tintable"
+    "cross": "fall-foraging:block/acorns_stage1",
+    "tint": "fall-foraging:block/acorns_stage1_tintable"
   }
 }

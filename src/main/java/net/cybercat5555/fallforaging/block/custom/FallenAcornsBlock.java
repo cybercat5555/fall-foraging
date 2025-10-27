@@ -85,11 +85,11 @@ public class FallenAcornsBlock extends PlantBlock {
     static {
         FACING = Properties.HORIZONTAL_FACING;
         ACORN_AMOUNT = IntProperty.of("acorn_count", 0, 4);
-        FACING_AND_AMOUNT_TO_SHAPE = Util.memoize((facing, acornAmount) -> {
-            VoxelShape[] voxelShapes = new VoxelShape[]{Block.createCuboidShape(8.0, 0.0, 8.0, 16.0, 1.0, 16.0), Block.createCuboidShape(8.0, 0.0, 0.0, 16.0, 1.0, 8.0), Block.createCuboidShape(0.0, 0.0, 0.0, 8.0, 1.0, 8.0), Block.createCuboidShape(0.0, 0.0, 8.0, 8.0, 1.0, 16.0)};
+        FACING_AND_AMOUNT_TO_SHAPE = Util.memoize((facing, acorn_count) -> {
+            VoxelShape[] voxelShapes = new VoxelShape[]{Block.createCuboidShape(8.0, 1.0, 8.0, 16.0, 1.0, 16.0), Block.createCuboidShape(8.0, 1.0, 1.0, 16.0, 1.0, 8.0), Block.createCuboidShape(1.0, 1.0, 1.0, 8.0, 1.0, 8.0), Block.createCuboidShape(1.0, 1.0, 8.0, 8.0, 1.0, 16.0)};
             VoxelShape voxelShape = VoxelShapes.empty();
 
-            for(int i = 0; i < acornAmount; ++i) {
+            for(int i = 0; i < acorn_count; ++i) {
                 int j = Math.floorMod(i - facing.getHorizontal(), 4);
                 voxelShape = VoxelShapes.union(voxelShape, voxelShapes[j]);
             }

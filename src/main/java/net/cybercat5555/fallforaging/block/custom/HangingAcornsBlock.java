@@ -17,9 +17,10 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
-public class HangingAcornsBlock extends PlantBlock implements canGrow {
+public class HangingAcornsBlock extends PlantBlock implements Fertilizable {
 
     public static final MapCodec<HangingAcornsBlock> CODEC = createCodec(HangingAcornsBlock::new);
     public static final IntProperty AGE;
@@ -75,6 +76,15 @@ public class HangingAcornsBlock extends PlantBlock implements canGrow {
 
     public boolean isFertilizable(WorldView world, BlockPos pos, BlockState state) {
         return !isHanging(state) || !isFullyGrown(state);
+    }
+
+    public boolean canGrow(World world, Random random, BlockPos pos, BlockState state) {
+        return true;
+    }
+
+    public void grow(ServerWorld world, Random random, BlockPos pos, BlockState state) {
+        int i = Math.min(3, (Integer)state.get(AGE) + 1);
+        world.setBlockState(pos, (BlockState)state.with(AGE, i), 2);
     }
 
 
