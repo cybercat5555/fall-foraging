@@ -106,7 +106,7 @@ public class HangingAcornsBlock extends PlantBlock implements Fertilizable {
 
     static {
         AGE = Properties.AGE_3;
-            SHAPES = new VoxelShape[]{Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 4.0, 16.0), Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 4.0, 16.0), Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 5.0, 16.0), Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 7.0, 16.0)};
+            SHAPES = new VoxelShape[]{Block.createCuboidShape(0.0, 10.0, 0.0, 16.0, 16.0, 16.0), Block.createCuboidShape(0.0, 10.0, 0.0, 16.0, 16.0, 16.0), Block.createCuboidShape(0.0, 10.0, 0.0, 16.0, 16.0, 16.0), Block.createCuboidShape(0.0, 10.0, 0.0, 16.0, 16.0, 16.0)};
         HANGING = Properties.HANGING;
     }
 }
