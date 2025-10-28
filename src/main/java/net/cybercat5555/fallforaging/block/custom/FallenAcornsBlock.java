@@ -86,7 +86,7 @@ public class FallenAcornsBlock extends PlantBlock {
         FACING = Properties.HORIZONTAL_FACING;
         ACORN_AMOUNT = IntProperty.of("acorn_count", 0, 4);
         FACING_AND_AMOUNT_TO_SHAPE = Util.memoize((facing, acorn_count) -> {
-            VoxelShape[] voxelShapes = new VoxelShape[]{Block.createCuboidShape(8.0, 1.0, 8.0, 16.0, 1.0, 16.0), Block.createCuboidShape(8.0, 1.0, 1.0, 16.0, 1.0, 8.0), Block.createCuboidShape(1.0, 1.0, 1.0, 8.0, 1.0, 8.0), Block.createCuboidShape(1.0, 1.0, 8.0, 8.0, 1.0, 16.0)};
+            VoxelShape[] voxelShapes = new VoxelShape[]{Block.createCuboidShape(8.0, 0.0, 8.0, 16.0, 1.0, 16.0), Block.createCuboidShape(8.0, 0.0, 0.0, 16.0, 1.0, 8.0), Block.createCuboidShape(0.0, 0.0, 0.0, 8.0, 1.0, 8.0), Block.createCuboidShape(0.0, 0.0, 8.0, 8.0, 1.0, 16.0)};
             VoxelShape voxelShape = VoxelShapes.empty();
 
             for(int i = 0; i < acorn_count; ++i) {
