@@ -20,7 +20,7 @@ public class FallForagingClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FALLEN_ACORNS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.HANGING_ACORNS, RenderLayer.getCutout());
 
-        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getFoliageColor(world, pos), ModBlocks.HANGING_ACORNS);
+        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getFoliageColor(view, pos), ModBlocks.HANGING_ACORNS);
 
 
 
