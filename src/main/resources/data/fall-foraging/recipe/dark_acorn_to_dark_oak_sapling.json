@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "fall-foraging:dark_acorn"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:dark_oak_sapling"
+  }
+}
